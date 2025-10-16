@@ -1,0 +1,10 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  background-image: url('https://source.unsplash.com/1600x600/?india,travel');
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+}

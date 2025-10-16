@@ -1,0 +1,11 @@
+h1{
+font-family: fantasy ;    color: #d844b8;
+    text-align: center;
+    text-size-adjust: 55px;
+    font-weight: 900;
+    word-spacing: 20px;
+    line-height: 1.5x;
+    text-decoration:underline  double ;
+    text-decoration-color: rgb(233, 18, 18);
+    text-transform: uppercase;
+}

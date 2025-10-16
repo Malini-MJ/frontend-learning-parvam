@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5 p-4 bg-light rounded">
+    <h1 class="text-center mb-5">Simple Cart</h1>
+
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Product A</h5>
+            <p class="card-text">Price: ₹100</p>
+            <button class="btn btn-primary" onclick="addToCart('Product A', 100)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Product B</h5>
+            <p class="card-text">Price: ₹150</p>
+            <button class="btn btn-primary" onclick="addToCart('Product B', 150)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Product C</h5>
+            <p class="card-text">Price: ₹200</p>
+            <button class="btn btn-primary" onclick="addToCart('Product C', 200)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 text-center">
+      <h4>Cart Summary</h4>
+      <p id="cart-items">Items: 0</p>
+      <p id="cart-total">Total: ₹0</p>
+    </div>
+  </div>
+
+  <script>
+    let cartCount = 0;
+    let cartTotal = 0;
+
+    function addToCart(productName, price) {
+      cartCount++;
+      cartTotal += price;
+      document.getElementById("cart-items").textContent = "Items: " + cartCount;
+      document.getElementById("cart-total").textContent = "Total: ₹" + cartTotal;
+    }
+    const cartCounts = {
+  A: 0,
+  B: 0,
+  C: 0
+};
+
+function addToCart(productKey) {
+  cartCounts[productKey]++;
+  document.getElementById(`count-${productKey}`).textContent = "Added: " + cartCounts[productKey];
+}
+
+  </script>
+</body>
+</html>
