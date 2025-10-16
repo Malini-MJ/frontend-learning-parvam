@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Show Time on Click</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+</head>
+<body class="d-flex flex-column justify-content-center align-items-center vh-100 bg-light">
+
+  <div class="container text-center p-4 bg-white rounded shadow" style="max-width: 400px;">
+    <h3 class="text-primary mb-4">Click to Show Current Time</h3>
+    <button class="btn btn-success mb-3" onclick="showTime()">Show Time</button>
+    <div id="output" class="alert alert-info d-none"></div>
+    <input 
+    type="text"
+
+id="res"
+class="form-control text-center"
+placeholder="results will appear here"
+readonly>
+
+</div>
+
+  <script>
+    function showTime() {
+        document.getElementById("res").value= new Date().toLocaleString();
+      
+    }
+  </script>
+
+</body>
+</html>

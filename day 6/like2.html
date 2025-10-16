@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>likes</title>
+</head>
+<body style="background-color: black;">
+  <h1 style="color: aliceblue; text-align: center;" class="like-count">0 likes</h1>
+  <div style="display: flex; justify-content: center; gap:30px">
+    <button class="btn-like" style="
+      color: white;
+      background-color: rgb(224, 39, 39);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;">❤
+</button>
+
+    <button class="btn-unlike" style="
+      color: white;
+      background-color: rgb(203, 224, 255);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;">💔</button>
+  </div>
+
+  <script>
+    const likeButton = document.querySelector('.btn-like');
+    const unlikeButton = document.querySelector('.btn-unlike');
+    const likecount = document.querySelector('.like-count');
+    let likes = 0;
+
+    likeButton.addEventListener('click', () => {
+      console.log('like button clicked');
+      likes++;
+      likecount.innerHTML = `${likes} likes`;
+    });
+
+    unlikeButton.addEventListener('click', () => {
+      console.log('unlike button clicked');
+      if (likes > 0) {
+        likes--;
+        likecount.innerHTML = `${likes} likes`;
+      }
+    });
+  </script>
+</body>
+</html>

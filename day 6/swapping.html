@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swap Numbers</title>
+  <style>
+    body {
+      background-color: rgb(245, 123, 123);
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding-top: 50px;
+    }
+    h2{
+        text-decoration: underline rgb(223, 48, 77);
+    }
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+    input[type="number"] {
+      width: 100px;
+    }
+    button {
+      background-color: #ec1757;
+      color: white;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <h2>Swap Two Numbers</h2>
+
+  <input type="number" id="a" placeholder="Enter no.1">
+  <input type="number" id="b" placeholder="Enter no.2">
+  <br>
+  <button onclick="swap()">After Swap</button>
+
+  <div id="result"></div>
+
+  <script>
+    function swap() {
+      let a = Number(document.getElementById("a").value);
+      let b = Number(document.getElementById("b").value);
+
+      let temp = a;
+      a = b;
+      b = temp;
+
+      document.getElementById("result").innerText = `A = ${a}, B = ${b}`;
+    }
+  </script>
+
+</body>
+</html>
